@@ -1,0 +1,13 @@
+{
+  "itemGroup.infinite_board_games": "Example Mod Tab",
+  "block.infinite_board_games.example_block": "Example Block",
+  "item.infinite_board_games.example_item": "Example Item",
+
+  "infinite_board_games.configuration.title": "Example Mod Configs",
+  "infinite_board_games.configuration.section.infinite_board_games.common.toml": "Example Mod Configs",
+  "infinite_board_games.configuration.section.infinite_board_games.common.toml.title": "Example Mod Configs",
+  "infinite_board_games.configuration.items": "Item List",
+  "infinite_board_games.configuration.logDirtBlock": "Log Dirt Block",
+  "infinite_board_games.configuration.magicNumberIntroduction": "Magic Number Text",
+  "infinite_board_games.configuration.magicNumber": "Magic Number"
+}
