@@ -1,0 +1,78 @@
+{
+  "id": "coup",
+  "display_name": "coup.display_name",
+  "description": "coup.description",
+  "size": "1x1",
+  "layout": {
+    "width": 1,
+    "height": 1,
+    "components": [
+      {
+        "type": "card_pile",
+        "id": "pool",
+        "width": 1,
+        "height": 1,
+        "cards": [
+          {
+            "type": "duke",
+            "count": 3
+          },
+          {
+            "type": "assassin",
+            "count": 3
+          },
+          {
+            "type": "duke",
+            "count": 3
+          },
+          {
+            "type": "duke",
+            "count": 3
+          },
+          {
+            "type": "duke",
+            "count": 3
+          }
+        ]
+      }
+    ]
+  },
+  "teaming": {
+    "min_teams": 2,
+    "max_teams": 6,
+    "default_team_config": {
+      "min_players": 1,
+      "max_players": 1,
+      "turn_actions": {
+        "type": "use_ability",
+        "list": "default",
+        "interruptible": true,
+        "interruptible_duration": 5,
+        "interruptible_hint": "coup.press_button_to_raise_doubt"
+      }
+    }
+  },
+  "event_handlers": [
+    {
+      "type": "game_start",
+      "actions": [
+        {
+          "type": "split_cards",
+          "from": "pool",
+          "to": "all_players",
+          "each": 2
+        },
+        {
+          "type": "set_turn",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "ability_interruption_attempt",
+      "conditions": {
+        "all_of": []
+      }
+    }
+  ]
+}

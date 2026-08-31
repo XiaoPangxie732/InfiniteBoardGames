@@ -1,0 +1,7 @@
+{
+  "model": {
+    "type": "block",
+    "value": "minecraft:white_concrete"
+  },
+  "can_place_on": ["empty"]
+}

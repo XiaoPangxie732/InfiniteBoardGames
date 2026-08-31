@@ -1,0 +1,121 @@
+{
+  "id": "wuziqi",
+  "display_name": "wuziqi.display_name",
+  "description": "wuziqi.description",
+  "size": "1x1",
+  "layout": {
+    "width": 15,
+    "height": 15,
+    "components": [
+      {
+        "type": "grid",
+        "id": "board",
+        "width": 15,
+        "height": 15,
+        "line_position": "INTERSECT",
+        "line_width": 1
+      }
+    ]
+  },
+  "teaming": {
+    "min_teams": 2,
+    "max_teams": 2,
+    "duplicatable": true,
+    "default_team_config": {
+      "min_players": 1,
+      "max_players": 1
+    },
+    "explicit_teams": [
+      {
+        "id": "black",
+        "display_name": "wuziqi.explicit_teams.black",
+        "turn_actions": {
+          "type": "place_piece",
+          "id": "black",
+          "on": "board"
+        }
+      },
+      {
+        "id": "white",
+        "display_name": "wuziqi.explicit_teams.white",
+        "turn_actions": {
+          "type": "place_piece",
+          "id": "white",
+          "on": "board"
+        }
+      }
+    ]
+  },
+  "status_displays": [
+    {
+      "type": "turn_text",
+      "ours": "wuziqi.status.turn.ours",
+      "others": "wuziqi.status.turn.others"
+    }
+  ],
+  "event_handlers": [
+    {
+      "type": "game_start",
+      "actions": {
+        "type": "set_turn",
+        "value": "black"
+      }
+    },
+    {
+      "type": "piece_place",
+      "actions": [
+        {
+          "type": "merge_or_create_piece_group",
+          "id": "horizontal",
+          "directions": "horizontal"
+        },
+        {
+          "type": "merge_or_create_piece_group",
+          "id": "vertical",
+          "directions": "vertical"
+        },
+        {
+          "type": "merge_or_create_piece_group",
+          "id": "main_diagonal",
+          "directions": "main_diagonal"
+        },
+        {
+          "type": "merge_or_create_piece_group",
+          "id": "secondary_diagonal",
+          "directions": "secondary_diagonal"
+        },
+        {
+          "type": "win_check",
+          "conditions": {
+            "any_of": [
+              {
+                "type": "greater_equal",
+                "piece_group": "horizontal",
+                "value": 5
+              },
+              {
+                "type": "greater_equal",
+                "piece_group": "vertical",
+                "value": 5
+              },
+              {
+                "type": "greater_equal",
+                "piece_group": "main_diagonal",
+                "value": 5
+              },
+              {
+                "type": "greater_equal",
+                "piece_group": "secondary_diagonal",
+                "value": 5
+              }
+            ]
+          }
+        },
+        {
+          "type": "set_turn",
+          "value": "#next"
+        }
+      ]
+    }
+  ]
+}
