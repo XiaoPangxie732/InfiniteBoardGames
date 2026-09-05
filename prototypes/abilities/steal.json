@@ -1,0 +1,11 @@
+{
+  "title": "coup.abilities.steal.title",
+  "tooltip": "coup.abilities.steal.tooltip",
+  "effects": [
+    {
+      "type": "select_and_decrement_team_variable",
+      "name": "coins",
+      "count": 2
+    }
+  ]
+}

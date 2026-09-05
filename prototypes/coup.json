@@ -4,7 +4,7 @@
   "description": "coup.description",
   "size": "1x1",
   "layout": {
-    "width": 1,
+    "width": 2,
     "height": 1,
     "components": [
       {
@@ -12,7 +12,7 @@
         "id": "pool",
         "width": 1,
         "height": 1,
-        "cards": [
+        "initial_cards": [
           {
             "type": "duke",
             "count": 3
@@ -34,6 +34,12 @@
             "count": 3
           }
         ]
+      },
+      {
+        "type": "card_pile",
+        "id": "dead",
+        "width": 1,
+        "height": 1
       }
     ]
   },
@@ -60,11 +66,12 @@
           "type": "split_cards",
           "from": "pool",
           "to": "all_players",
-          "each": 2
+          "each": 2,
+          "shuffle": true
         },
         {
           "type": "set_turn",
-          "value": "0"
+          "value": 0
         }
       ]
     },
@@ -73,6 +80,21 @@
       "conditions": {
         "all_of": []
       }
+    },
+    {
+      "type": "ability_interruption_rejection_attempt",
+      "conditions": {
+        "all_of": []
+      }
+    },
+    {
+      "type": "ability_use",
+      "actions": [
+        {
+          "type": "set_turn",
+          "value": "#next"
+        }
+      ]
     }
   ]
 }

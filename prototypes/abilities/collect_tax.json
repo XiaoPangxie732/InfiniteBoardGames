@@ -1,0 +1,11 @@
+{
+  "title": "coup.abilities.collect_tax.title",
+  "tooltip": "coup.abilities.collect_tax.tooltip",
+  "effects": [
+    {
+      "type": "increment_team_variable",
+      "name": "coins",
+      "count": 3
+    }
+  ]
+}

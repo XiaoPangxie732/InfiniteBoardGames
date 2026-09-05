@@ -1,0 +1,16 @@
+{
+  "title": "coup.abilities.exchange.title",
+  "tooltip": "coup.abilities.exchange.tooltip",
+  "effects": [
+    {
+      "type": "get_cards_from_card_pile",
+      "count": 2,
+      "card_pile": "pool"
+    },
+    {
+      "type": "put_cards_to_card_pile",
+      "count": 2,
+      "card_pile": "pool"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "coup.abilities.coup.title",
+  "tooltip": "coup.abilities.coup.tooltip",
+  "effects": [
+    {
+      "type": "designate_team_and_lose_cards",
+      "count": 1
+    }
+  ],
+  "interruptible": false
+}
