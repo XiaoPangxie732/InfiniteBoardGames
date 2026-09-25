@@ -1,14 +1,7 @@
 package cn.maxpixel.mods.infinite_board_games.registry;
 
-import cn.maxpixel.mods.infinite_board_games.InfiniteBoardGamesMod;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class CreativeTabRegistry {
 //    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
@@ -25,8 +18,8 @@ public class CreativeTabRegistry {
 
     // Add the example block item to the building blocks tab
     public static void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ItemRegistry.EXAMPLE_BLOCK_ITEM);
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(ItemRegistry.GAME_TABLE);
         }
     }
 }

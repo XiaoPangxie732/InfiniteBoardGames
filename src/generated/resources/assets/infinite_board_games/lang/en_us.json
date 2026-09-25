@@ -1,0 +1,15 @@
+{
+  "block.infinite_board_games.game_table": "Game Table",
+  "commands.infinite_board_games.infinite_board_games.failure.pos_not_game_table": "The block at the given position is not a game table",
+  "commands.infinite_board_games.infinite_board_games.success.clear_base_texture_suffix": "Successfully cleared the base texture suffix at %s, %s, %s",
+  "commands.infinite_board_games.infinite_board_games.success.set_base_texture": "Successfully changed the base texture at %s, %s, %s to \"%s\"",
+  "commands.infinite_board_games.infinite_board_games.success.set_base_texture_suffix": "Successfully changed the base texture suffix at %s, %s, %s to \"%s\"",
+  "infinite_board_games.configuration.section.infinite_board_games.common.toml": "Infinite Board Games Configs",
+  "infinite_board_games.configuration.section.infinite_board_games.common.toml.title": "Infinite Board Games Configs",
+  "infinite_board_games.configuration.showDebugInfo": "Show debug info",
+  "infinite_board_games.configuration.showDebugInfo.tooltip": "Whether to show debug info",
+  "infinite_board_games.configuration.title": "Infinite Board Games Configs",
+  "infinite_board_games.container.game_table": "Game Table",
+  "item.infinite_board_games.game": "Game",
+  "item.infinite_board_games.game_card": "Game Card"
+}

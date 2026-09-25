@@ -1,9 +1,12 @@
 {
   "title": "coup.abilities.steal.title",
   "tooltip": "coup.abilities.steal.tooltip",
+  "has_targets": true,
+  "max_targets": 1,
   "effects": [
     {
-      "type": "select_and_decrement_team_variable",
+      "type": "decrease_team_variable",
+      "teams": "#targets",
       "name": "coins",
       "count": 2
     }

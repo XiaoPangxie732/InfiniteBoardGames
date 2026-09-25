@@ -3,7 +3,7 @@
   "tooltip": "coup.abilities.foreign_aid.tooltip",
   "effects": [
     {
-      "type": "increment_team_variable",
+      "type": "increase_team_variable",
       "name": "coins",
       "count": 2
     }

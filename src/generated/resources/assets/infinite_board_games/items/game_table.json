@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "infinite_board_games:block/game_table"
+  }
+}

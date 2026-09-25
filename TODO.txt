@@ -1,1 +1,7 @@
-Add total playtime stats
+Add total playtime/playcount stats
+explicit team太多，screen要如何排版？
+在关闭存档时将对局保存到存档
+
+游戏卡Shift右键游戏桌直接安装
+空手Shift右键游戏桌打开菜单
+创造模式下手持方块右键改变游戏桌材质

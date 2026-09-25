@@ -3,7 +3,7 @@
   "tooltip": "coup.abilities.collect_tax.tooltip",
   "effects": [
     {
-      "type": "increment_team_variable",
+      "type": "increase_team_variable",
       "name": "coins",
       "count": 3
     }

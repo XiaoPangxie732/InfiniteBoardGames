@@ -1,7 +1,7 @@
 {
   "id": "wuziqi",
-  "display_name": "wuziqi.display_name",
-  "description": "wuziqi.description",
+  "display_name": "五子棋",
+  "description": "五子棋是一款经典的双人对弈游戏，两人各执黑白棋，黑棋先手，率先将五子连成一条线者获胜。",
   "size": "1x1",
   "layout": {
     "width": 15,
@@ -12,14 +12,12 @@
         "id": "board",
         "width": 15,
         "height": 15,
-        "line_position": "INTERSECT",
+        "line_position": "intersect",
         "line_width": 1
       }
     ]
   },
   "teaming": {
-    "min_teams": 2,
-    "max_teams": 2,
     "duplicatable": true,
     "default_team_config": {
       "min_players": 1,
@@ -28,7 +26,7 @@
     "explicit_teams": [
       {
         "id": "black",
-        "display_name": "wuziqi.explicit_teams.black",
+        "display_name": "黑方",
         "turn_actions": {
           "type": "place_piece",
           "id": "black",
@@ -37,7 +35,7 @@
       },
       {
         "id": "white",
-        "display_name": "wuziqi.explicit_teams.white",
+        "display_name": "白方",
         "turn_actions": {
           "type": "place_piece",
           "id": "white",
@@ -49,8 +47,8 @@
   "status_displays": [
     {
       "type": "turn_text",
-      "ours": "wuziqi.status.turn.ours",
-      "others": "wuziqi.status.turn.others"
+      "ours": "轮到您落子",
+      "others": "轮到对方落子"
     }
   ],
   "event_handlers": [

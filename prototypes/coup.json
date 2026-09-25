@@ -44,8 +44,10 @@
     ]
   },
   "teaming": {
-    "min_teams": 2,
-    "max_teams": 6,
+    "implicit_teams": {
+      "min_teams": 2,
+      "max_teams": 6
+    },
     "default_team_config": {
       "min_players": 1,
       "max_players": 1,
@@ -88,7 +90,7 @@
       }
     },
     {
-      "type": "ability_use",
+      "type": "ability_used",
       "actions": [
         {
           "type": "set_turn",

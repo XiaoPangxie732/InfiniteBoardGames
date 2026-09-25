@@ -1,0 +1,15 @@
+{
+  "block.infinite_board_games.game_table": "游戏桌",
+  "commands.infinite_board_games.infinite_board_games.failure.pos_not_game_table": "给定位置的方块不是游戏桌",
+  "commands.infinite_board_games.infinite_board_games.success.clear_base_texture_suffix": "成功将位于%s, %s, %s的基座纹理后缀清除",
+  "commands.infinite_board_games.infinite_board_games.success.set_base_texture": "成功将位于%s, %s, %s的基座纹理更改为\"%s\"",
+  "commands.infinite_board_games.infinite_board_games.success.set_base_texture_suffix": "成功将位于%s, %s, %s的基座纹理后缀更改为\"%s\"",
+  "infinite_board_games.configuration.section.infinite_board_games.common.toml": "无穷桌游 配置",
+  "infinite_board_games.configuration.section.infinite_board_games.common.toml.title": "无穷桌游 配置",
+  "infinite_board_games.configuration.showDebugInfo": "显示调试信息",
+  "infinite_board_games.configuration.showDebugInfo.tooltip": "是否显示调试信息",
+  "infinite_board_games.configuration.title": "无穷桌游 配置",
+  "infinite_board_games.container.game_table": "游戏桌",
+  "item.infinite_board_games.game": "游戏",
+  "item.infinite_board_games.game_card": "游戏卡"
+}

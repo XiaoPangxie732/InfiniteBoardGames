@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "front": "coup_card_front",
+    "back": "coup_card_back"
+  },
+  "properties": ["ability_duke"]
+}

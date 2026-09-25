@@ -1,21 +1,29 @@
 package cn.maxpixel.mods.infinite_board_games.registry;
 
-import cn.maxpixel.mods.infinite_board_games.InfiniteBoardGamesMod;
+import cn.maxpixel.mods.infinite_board_games.InfiniteBoardGames;
+import cn.maxpixel.mods.infinite_board_games.commands.ModCommands;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.registries.DataPackRegistryEvent;
 
-//@EventBusSubscriber(modid = InfiniteBoardGamesMod.MODID)
+@EventBusSubscriber(modid = InfiniteBoardGames.MODID)
 public class Registries {
-    public static void registerDeferred(IEventBus modEventBus) {
-        // Register the Deferred Register to the mod event bus so blocks get registered
+    public static void register(IEventBus modEventBus) {
         BlockRegistry.BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
+        BlockEntityRegistry.BLOCK_ENTITY_TYPES.register(modEventBus);
         ItemRegistry.ITEMS.register(modEventBus);
+        DataAttachmentRegistry.ATTACHMENT_TYPES.register(modEventBus);
+        MenuTypeRegistry.MENU_TYPES.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
 //        CreativeTabRegistry.CREATIVE_MODE_TABS.register(modEventBus);
+    }
+
+    @SubscribeEvent
+    public static void onRegisterCommands(RegisterCommandsEvent event) {
+        ModCommands.register(event);
     }
 
     @SubscribeEvent
