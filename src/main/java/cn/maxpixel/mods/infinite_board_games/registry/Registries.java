@@ -2,9 +2,11 @@ package cn.maxpixel.mods.infinite_board_games.registry;
 
 import cn.maxpixel.mods.infinite_board_games.InfiniteBoardGames;
 import cn.maxpixel.mods.infinite_board_games.commands.ModCommands;
+import cn.maxpixel.mods.infinite_board_games.game.condition.Conditions;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.registries.DataPackRegistryEvent;
@@ -34,5 +36,10 @@ public class Registries {
     @SubscribeEvent
     public static void registerDatapackRegistries(DataPackRegistryEvent.NewRegistry event) {
         GameRegistry.registerDatapackRegistries(event);
+    }
+
+    @SubscribeEvent
+    public static void onCommonSetupEvent(FMLCommonSetupEvent event) {
+        Conditions.bootstrap();
     }
 }
